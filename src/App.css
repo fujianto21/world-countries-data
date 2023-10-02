@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-size: 19px;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.country-header {
+    border-radius: 0.2rem;
+    padding: 15px;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    margin: 10px 5%;
+}
+
+.country-header>h1 {
+    font-size: 55px;
+    color: #009aff;
+}
+
+/* Search */
+.info-search {
+    color: #5c5b5b;
+    font-size: 17px;
+}
+
+.country-search {
+    text-align: center;
+    margin: 10px 5%;
+}
+
+.input-search {
+    border-radius: 2rem;
+    border: 2px solid rgb(194, 215, 239);
+    color: #333;
+    height: 3rem;
+    font-size: 2rem;
+    margin: 10px auto;
+    text-indent: 1.5rem;
+    width: 50%;
+    outline: none;
+}
+
+.input-search:focus,
+.input-search:hover {
+    border: 2px solid #009aff;
+}
+
+/* Container */
+.country-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    margin: 0 5%;
+    padding: 0px 20px;
+    justify-content: center;
+    align-content: center;
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+.error-message {
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+}
+
+.country-box {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.country-box:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.country-flag {
+    height: 8rem;
+    margin: auto;
+    text-align: center;
+    width: 16rem;
+}
+
+.country-flag>img {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    display: block;
+    margin: auto;
+    max-height: 75%;
+    max-width: 75%;
+    min-height: 75%;
+    min-width: 75%;
+}
+
+.country-name {
+    margin: 0px;
+}
+
+.country-text p {
+    text-align: left;
+    color: #5c5b5b;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    padding: .1rem;
+}
+
+.country-text span {
+    font-weight: bold;
+}
+
+/* Country Stastitics */
+.country-statistics {
+    border-radius: 0.2rem;
+    padding: 1rem;
+    margin: 10px 5%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.statistics-bar {
+    grid-gap: .5rem .5rem;
+    align-items: center;
+    color: #333;
+    display: grid;
+    font-size: 1.35rem;
+    font-weight: 600;
+    grid-template-columns: 25% 40% 15%;
+    justify-content: center;
+    letter-spacing: .075rem;
+    margin: .5rem;
+}
+
+.statistics-bar .bar {
+    background: #009aff;
+    border-radius: 0.2rem;
+}
+
+.bar-container {
+    background: #f6f6f6;
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 30px;
+}
+
+.bar-val {
+    text-align: left;
+}
+
+/* Footer */
+.country-footer {
+    border-radius: 0.2rem;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin: 10px 5%;
+    text-align: center;
+}
+
+.country-footer p,
+h4 {
+    font-size: 22px;
+}
+
+.country-footer a {
+    text-decoration: none;
+    color: #009aff;
+    font-weight: 500;
+}
+
+/* Button */
+.blue-button {
+    font-size: 1.2rem;
+    background-color: #009aff;
+    color: #fff;
+    border: 0;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.btn-icon {
+    font-size: 21px;
+}
+
+.btn-icon-up {
+    margin-top: 5px;
+}
+
+.blue-button:hover {
+    background-color: #0079c9;
+}
+
+@media screen and (max-width: 992px) {
+    .country-container {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .country-container {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .country-container,
+    .country-header,
+    .country-footer {
+        margin: 10px 5px;
+    }
+
+    .country-header>h1 {
+        font-size: 25px;
+    }
+
+    .input-search {
+        width: 100%;
+        font-size: 1.2rem;
+        text-indent: 1rem;
+    }
+
+    .statistics-bar {
+        display: block;
+        font-size: 17px;
+    }
+
+    .bar-val {
+        text-align: center;
+        /* display: none; */
+    }
+
+    .statistics-bar {
+        grid-template-columns: 100% 60% 40%;
+    }
+
+    .country-footer p,
+    h4 {
+        font-size: 19px;
+    }
+
+    .blue-button {
+        font-size: 0.95rem;
+    }
+
+    .btn-icon {
+        font-size: 1rem;
+    }
+}
